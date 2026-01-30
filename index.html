@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Kindness Generator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #56ab2f, #a8e063);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            width: 350px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+        }
+
+        #kindnessText {
+            font-size: 18px;
+            margin: 20px 0;
+            min-height: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #56ab2f;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #3d8b1f;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h1>💚 Random Kindness</h1>
+        <p id="kindnessText">Click the button to get a kind idea</p>
+        <button onclick="generateKindness()">Show Kindness</button>
+    </div>
+
+    <script>
+        const kindnessIdeas = [
+            "Compliment someone today 😊",
+            "Help a classmate with notes 📘",
+            "Smile at a stranger 🙂",
+            "Thank your parents ❤️",
+            "Share your food with someone 🍎",
+            "Donate old clothes 👕",
+            "Encourage a friend 🌟",
+            "Help someone cross the road 🚦",
+            "Say sorry if you hurt someone 🤝",
+            "Water plants 🌱"
+        ];
+
+        function generateKindness() {
+            const randomIndex = Math.floor(Math.random() * kindnessIdeas.length);
+            document.getElementById("kindnessText").innerText = kindnessIdeas[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
